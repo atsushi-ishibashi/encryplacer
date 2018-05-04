@@ -51,3 +51,4 @@ Currently `encryplacer` upload with the same name without backing up.
 - ReadCloser to ReadSeeker
 - prefix arg
 - use channel to pass key to `replaceEncryption`
+- Support SSE-C
