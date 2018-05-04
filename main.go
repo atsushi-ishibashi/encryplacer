@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"os"
 	"sync"
@@ -104,7 +105,7 @@ func replaceEncryption(key string) error {
 	}
 
 	buffer := make([]byte, *resp.ContentLength)
-	resp.Body.Read(buffer)
+	io.ReadFull(resp.Body, buffer)
 
 	putinput := &s3.PutObjectInput{
 		Bucket:               bucket,
