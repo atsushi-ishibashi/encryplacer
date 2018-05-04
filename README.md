@@ -1,7 +1,7 @@
 # encryplacer
 encryplacer is CLI to replace the encryption of S3 object with KMS encryption
 
-## Install
+## Installing
 ```
 make build
 ```
