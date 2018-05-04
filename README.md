@@ -43,3 +43,8 @@ key1 success.
 key2 success.
 ...
 ```
+
+### TODO
+- ReadCloser to ReadSeeker
+- prefix arg
+- use channel to pass key to `replaceEncryption`
