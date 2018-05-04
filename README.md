@@ -44,6 +44,9 @@ key2 success.
 ...
 ```
 
+### Warning
+Currently `encryplacer` upload object with the same name without backing up.
+
 ### TODO
 - ReadCloser to ReadSeeker
 - prefix arg
