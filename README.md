@@ -25,4 +25,7 @@ Usage of encryplacer:
 ```
 ```
 $ encryplacer -bucket <bucket> -kms <key-id>
+key1 success.
+key2 success.
+...
 ```

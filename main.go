@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"flag"
+	"fmt"
 	"log"
 	"os"
 	"sync"
@@ -81,8 +82,11 @@ func main() {
 		go func(k string) {
 			limit <- struct{}{}
 			defer wg.Done()
-			if err := replaceEncryption(k); err != nil {
-				log.Println(err)
+			err := replaceEncryption(k)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "%s failed. Error: %s\n", k, err)
+			} else {
+				fmt.Fprintf(os.Stdout, "%s success.\n", k)
 			}
 			<-limit
 		}(key)
